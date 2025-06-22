@@ -13,33 +13,46 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: main_opt.cpp
+///   File: main.cpp
 ///
 /// Author: $author$
-///   Date: 6/21/2025
+///   Date: 6/22/2025
 //////////////////////////////////////////////////////////////////////////
-#include "xos/app/console/protocol/sttp/client/main_opt.hpp"
+#include "xos/app/console/network/sockets/protocol/sttp/client/main.hpp"
 
-#ifndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE
-/// #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
-#else /// ndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
-#endif /// ndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
+#ifdef XOS_CONSOLE_MAIN_MAIN
+#include "xos/console/main_main.cpp"
+#ifndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE
+#define XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE
+#else /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE 
+#endif /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE 
+#else /// def XOS_CONSOLE_MAIN_MAIN 
+#endif /// def XOS_CONSOLE_MAIN_MAIN 
+
+#ifndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE
+/// #define XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE 
+#else /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE 
+#endif /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE 
 
 namespace xos {
 namespace app {
 namespace console {
+namespace network {
+namespace sockets {
 namespace protocol {
 namespace sttp {
 namespace client {
 
-/// class main_optt
-#ifdef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE
-static main_opt the_main_opt;
-#endif /// def XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
+/// class maint
+#ifdef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE
+static main the_main;
+#endif /// def XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_CLIENT_MAIN_INSTANCE 
 
 } /// namespace client 
 } /// namespace sttp 
 } /// namespace protocol 
+} /// namespace sockets 
+} /// namespace network 
 } /// namespace console 
 } /// namespace app 
 } /// namespace xos 

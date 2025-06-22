@@ -16,13 +16,12 @@
 ///   File: main_opt.hpp
 ///
 /// Author: $author$
-///   Date: 6/13/2025
+///   Date: 6/21/2025
 //////////////////////////////////////////////////////////////////////////
 #ifndef XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_OPT_HPP
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_OPT_HPP
 
-#include "xos/app/console/protocol/crypto/main.hpp"
-#include "xos/protocol/sttp/base/output.hpp"
+#include "xos/app/console/protocol/ttp/base/main.hpp"
 
 ///////////////////////////////////////////////////////////////////////
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPT "server-rsa-key-pair"
@@ -30,8 +29,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTUSE "server rsa key pair"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTVAL_S "k::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTVAL_C 'k'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTVAL_S "K::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTVAL_C 'K'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTARG_REQUIRED, \
@@ -43,8 +42,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTUSE "client rsa key pair"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTVAL_S "r::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTVAL_C 'r'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTVAL_S "N::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTVAL_C 'N'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTARG_REQUIRED, \
@@ -56,8 +55,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTUSE "pseudo random secret"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTVAL_S "t::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTVAL_C 't'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTVAL_S "R::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTVAL_C 'R'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTARG_REQUIRED, \
@@ -69,8 +68,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTUSE "pseudo random seed"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTVAL_S "e::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTVAL_C 'e'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTVAL_S "E::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTVAL_C 'E'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTARG_REQUIRED, \
@@ -82,8 +81,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTUSE "master secret seed"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTVAL_S "m::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTVAL_C 'm'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTVAL_S "M::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTVAL_C 'M'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTARG_REQUIRED, \
@@ -95,8 +94,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTUSE "key expansion seed"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTVAL_S "x::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTVAL_C 'x'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTVAL_S "X::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTVAL_C 'X'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_KEY_EXPANSION_SEED_OPTARG_REQUIRED, \
@@ -123,11 +122,11 @@
 ///////////////////////////////////////////////////////////////////////
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_OPTIONS_CHARS \
    XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_OPTIONS_CHARS_EXTEND \
-   XOS_APP_CONSOLE_PROTOCOL_CRYPTO_MAIN_OPTIONS_CHARS \
+   XOS_APP_CONSOLE_PROTOCOL_TTP_BASE_MAIN_OPTIONS_CHARS \
 
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_OPTIONS_OPTIONS \
    XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_OPTIONS_OPTIONS_EXTEND \
-   XOS_APP_CONSOLE_PROTOCOL_CRYPTO_MAIN_OPTIONS_OPTIONS \
+   XOS_APP_CONSOLE_PROTOCOL_TTP_BASE_MAIN_OPTIONS_OPTIONS \
 
 ///////////////////////////////////////////////////////////////////////
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_ARGS 0
@@ -142,8 +141,7 @@ namespace base {
 
 /// class main_optt
 template 
-<class TOutput = xos::protocol::sttp::base::outputt<>,
- class TExtends = xos::app::console::protocol::crypto::maint<TOutput>,  class TImplements = typename TExtends::implements>
+<class TExtends = xos::app::console::protocol::ttp::base::maint<>,  class TImplements = typename TExtends::implements>
 
 class main_optt: virtual public TImplements, public TExtends {
 public:
@@ -245,7 +243,7 @@ protected:
         run_ = &derives::all_output_server_rsa_key_pair_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_rsa_key_pair_run
     int (derives::*output_client_rsa_key_pair_run_)(int argc, char_t** argv, char_t** env);
     virtual int output_client_rsa_key_pair_run(int argc, char_t** argv, char_t** env) {
@@ -285,7 +283,7 @@ protected:
         run_ = &derives::all_output_client_rsa_key_pair_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_pseudo_random_secret_run
     int (derives::*output_pseudo_random_secret_run_)(int argc, char_t** argv, char_t** env);
     virtual int output_pseudo_random_secret_run(int argc, char_t** argv, char_t** env) {
@@ -325,7 +323,7 @@ protected:
         run_ = &derives::all_output_pseudo_random_secret_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_pseudo_random_seed_run
     int (derives::*output_pseudo_random_seed_run_)(int argc, char_t** argv, char_t** env);
     virtual int output_pseudo_random_seed_run(int argc, char_t** argv, char_t** env) {
@@ -365,7 +363,7 @@ protected:
         run_ = &derives::all_output_pseudo_random_seed_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_master_secret_seed_run
     int (derives::*output_master_secret_seed_run_)(int argc, char_t** argv, char_t** env);
     virtual int output_master_secret_seed_run(int argc, char_t** argv, char_t** env) {
@@ -405,7 +403,7 @@ protected:
         run_ = &derives::all_output_master_secret_seed_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_key_expansion_seed_run
     int (derives::*output_key_expansion_seed_run_)(int argc, char_t** argv, char_t** env);
     virtual int output_key_expansion_seed_run(int argc, char_t** argv, char_t** env) {
@@ -489,7 +487,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_SERVER_RSA_KEY_PAIR_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...client_rsa_key_pair_option...
     virtual int on_set_client_rsa_key_pair_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -531,7 +529,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_CLIENT_RSA_KEY_PAIR_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...pseudo_random_secret_option...
     virtual int on_set_pseudo_random_secret_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -573,7 +571,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SECRET_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...pseudo_random_seed_option...
     virtual int on_set_pseudo_random_seed_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -615,7 +613,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_PSEUDO_RANDOM_SEED_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...master_secret_seed_option...
     virtual int on_set_master_secret_seed_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -657,7 +655,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_BASE_MAIN_MASTER_SECRET_SEED_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...key_expansion_seed_option...
     virtual int on_set_key_expansion_seed_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {

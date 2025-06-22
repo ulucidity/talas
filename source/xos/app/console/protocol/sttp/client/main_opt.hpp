@@ -16,7 +16,7 @@
 ///   File: main_opt.hpp
 ///
 /// Author: $author$
-///   Date: 6/14/2025
+///   Date: 6/21/2025
 //////////////////////////////////////////////////////////////////////////
 #ifndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_HPP
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_HPP
@@ -25,26 +25,13 @@
 #include "xos/protocol/sttp/client/output.hpp"
 
 ///////////////////////////////////////////////////////////////////////
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPT "plain"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_OPTIONAL
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTARG "[string]"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTUSE "client hello plaintext"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTVAL_S "p::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTVAL_C 'p'
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTVAL_C}, \
-
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPT "client-hello"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_OPTIONAL
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTUSE "client hello"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_S "h::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_C 'h'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_S "H::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_C 'H'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTARG_REQUIRED, \
@@ -56,8 +43,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTUSE "client hello message sent"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTVAL_S "c::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTVAL_C 'c'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTVAL_S "C::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTVAL_C 'C'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTARG_REQUIRED, \
@@ -69,8 +56,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTARG "[string]"
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTUSE "server hello message recved"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTVAL_S "s::"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTVAL_C 's'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTVAL_S "S::"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTVAL_C 'S'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTARG_REQUIRED, \
@@ -82,8 +69,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTARG ""
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTUSE "output message sent/recved only"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTVAL_S "o"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTVAL_C 'o'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTVAL_S "L"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTVAL_C 'L'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTARG_REQUIRED, \
@@ -95,8 +82,8 @@
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTARG_RESULT 0
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTARG ""
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTUSE "client key exchange only"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTVAL_S "y"
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTVAL_C 'y'
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTVAL_S "Y"
+#define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTVAL_C 'Y'
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTION \
    {XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPT, \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTARG_REQUIRED, \
@@ -105,7 +92,6 @@
 
 ///////////////////////////////////////////////////////////////////////
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPTIONS_CHARS_EXTEND \
-    XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTVAL_S \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_S \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTVAL_S \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTVAL_S \
@@ -113,7 +99,6 @@
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_KEY_EXCHANGE_ONLY_OPTVAL_S \
 
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPTIONS_OPTIONS_EXTEND \
-    XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTION \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTION \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTION \
     XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTION \
@@ -142,8 +127,7 @@ namespace client {
 
 /// class main_optt
 template 
-<class TOutput = xos::protocol::sttp::client::output,
- class TExtends = xos::app::console::protocol::sttp::base::maint<TOutput>,  class TImplements = typename TExtends::implements>
+<class TExtends = xos::app::console::protocol::sttp::base::maint<>,  class TImplements = typename TExtends::implements>
 
 class main_optt: virtual public TImplements, public TExtends {
 public:
@@ -181,7 +165,10 @@ protected:
     typedef typename extends::in_reader_t in_reader_t;
     typedef typename extends::out_writer_t out_writer_t;
     typedef typename extends::err_writer_t err_writer_t;
-    typedef typename extends::output_t output_t;
+
+    typedef xos::protocol::sttp::client::output output_t;
+    typedef typename output_t::output_to_t output_to_t;
+    typedef typename output_t::output_to_t::string_t output_to_string_t;
 
     //////////////////////////////////////////////////////////////////////////
     /// run
@@ -236,7 +223,7 @@ protected:
         run_ = &derives::all_generate_client_hello_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_hello_message_run
     virtual int output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -266,7 +253,7 @@ protected:
         run_ = &derives::all_output_client_hello_message_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_server_hello_message_run
     virtual int output_server_hello_message_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -296,7 +283,7 @@ protected:
         run_ = &derives::all_output_server_hello_message_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_hello_message_plaintext_run
     virtual int output_client_hello_message_plaintext_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -328,7 +315,7 @@ protected:
         run_ = &derives::all_output_client_hello_message_plaintext_run;
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_hello_message_default_plaintext_run
     virtual int output_client_hello_message_default_plaintext_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -361,72 +348,6 @@ protected:
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
-    /// on...client_hello_plaintext_option...
-    virtual int on_get_client_hello_plaintext_option
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        return err;
-    }
-    virtual int on_client_hello_plaintext_option_get
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if (!(err = set_output_client_hello_message_plaintext_run(argc, argv, env))) {
-        } else {
-        }
-        return err;
-    }
-    virtual int on_set_client_hello_plaintext_option
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if ((optarg) && (optarg[0])) {
-            if (!(err = on_set_client_hello_option(optarg, optind, argc, argv, env))) {
-                if (!(err = on_client_hello_option_set(optarg, optind, argc, argv, env))) {
-                } else {
-                }
-            } else {
-            }
-        } else {
-        }
-        return err;
-    }
-    virtual int on_client_hello_plaintext_option_set
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if ((optarg) && (optarg[0])) {
-            if (!(err = set_output_client_hello_message_plaintext_run(argc, argv, env))) {
-            } else {
-            }
-        } else {
-        }
-        return err;
-    }
-    virtual int on_client_hello_plaintext_option
-    (int optval, const char_t* optarg, const char_t* optname,
-     int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if ((optarg) && (optarg[0])) {
-            if (!(err = on_set_client_hello_plaintext_option(optarg, optind, argc, argv, env))) {
-                if (!(err = on_client_hello_plaintext_option_set(optarg, optind, argc, argv, env))) {
-                } else {
-                }
-            } else {
-            }
-        } else {
-            if (!(err = on_get_client_hello_plaintext_option(optarg, optind, argc, argv, env))) {
-                if (!(err = on_client_hello_plaintext_option_get(optarg, optind, argc, argv, env))) {
-                } else {
-                }
-            } else {
-            }
-        }
-        return err;
-    }
-    virtual const char_t* client_hello_plaintext_option_usage(const char_t*& optarg, const struct option* longopt) {
-        const char_t* chars = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTUSE;
-        optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTARG;
-        return chars;
-    }
-    //////////////////////////////////////////////////////////////////////////
     /// ...client_hello_option...
     virtual int on_set_client_hello_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -451,7 +372,7 @@ protected:
         if ((optarg) && (optarg[0])) {
             if (!(err = on_set_client_hello_option(optarg, optind, argc, argv, env))) {
                 if (!(err = on_client_hello_option_set(optarg, optind, argc, argv, env))) {
-                    if (!(err = set_generate_client_hello_run(argc, argv, env))) {
+                    if (!(err = set_output_client_hello_message_plaintext_run(argc, argv, env))) {
                     }
                 } else {
                 }
@@ -468,7 +389,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...client_hello_message_option...
     virtual int on_set_client_hello_message_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -510,7 +431,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_MESSAGE_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...server_hello_message_option...
     virtual int on_set_server_hello_message_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -551,8 +472,8 @@ protected:
         const char_t* chars = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTUSE;
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_SERVER_HELLO_MESSAGE_OPTARG;
         return chars;
-    }    
-    //////////////////////////////////////////////////////////////////////////
+    }
+
     /// ...output_message_only_option...
     virtual int on_set_output_message_only_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -581,7 +502,7 @@ protected:
         optarg = XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OUTPUT_MESSAGE_ONLY_OPTARG;
         return chars;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...client_key_exchange_only_option...
     virtual int on_set_client_key_exchange_only_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -620,9 +541,6 @@ protected:
         int err = 0;
         switch(optval) {
 
-        case XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTVAL_C:
-            err = this->on_client_hello_plaintext_option(optval, optarg, optname, optind, argc, argv, env);
-            break;
         case XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_C:
             err = this->on_client_hello_option(optval, optarg, optname, optind, argc, argv, env);
             break;
@@ -651,9 +569,6 @@ protected:
         const char_t* chars = "";
         switch(longopt->val) {
 
-        case XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_PLAINTEXT_OPTVAL_C:
-            chars = this->client_hello_plaintext_option_usage(optarg, longopt);
-            break;
         case XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_CLIENT_HELLO_OPTVAL_C:
             chars = this->client_hello_option_usage(optarg, longopt);
             break;

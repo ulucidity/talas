@@ -16,30 +16,34 @@
 ///   File: main_opt.cpp
 ///
 /// Author: $author$
-///   Date: 6/21/2025
+///   Date: 6/22/2025
 //////////////////////////////////////////////////////////////////////////
-#include "xos/app/console/protocol/sttp/client/main_opt.hpp"
+#include "xos/app/console/network/sockets/protocol/sttp/server/main_opt.hpp"
 
-#ifndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE
-/// #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
-#else /// ndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
-#endif /// ndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
+#ifndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_SERVER_MAIN_OPT_INSTANCE
+/// #define XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_SERVER_MAIN_OPT_INSTANCE 
+#else /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_SERVER_MAIN_OPT_INSTANCE 
+#endif /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_SERVER_MAIN_OPT_INSTANCE 
 
 namespace xos {
 namespace app {
 namespace console {
+namespace network {
+namespace sockets {
 namespace protocol {
 namespace sttp {
-namespace client {
+namespace server {
 
 /// class main_optt
-#ifdef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE
+#ifdef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_SERVER_MAIN_OPT_INSTANCE
 static main_opt the_main_opt;
-#endif /// def XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_OPT_INSTANCE 
+#endif /// def XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_SERVER_MAIN_OPT_INSTANCE 
 
-} /// namespace client 
+} /// namespace server 
 } /// namespace sttp 
 } /// namespace protocol 
+} /// namespace sockets 
+} /// namespace network 
 } /// namespace console 
 } /// namespace app 
 } /// namespace xos 

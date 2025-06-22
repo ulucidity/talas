@@ -16,23 +16,27 @@
 ///   File: main.hpp
 ///
 /// Author: $author$
-///   Date: 6/21/2025
+///   Date: 6/22/2025
 //////////////////////////////////////////////////////////////////////////
-#ifndef XOS_APP_CONSOLE_PROTOCOL_STTP_SERVER_MAIN_HPP
-#define XOS_APP_CONSOLE_PROTOCOL_STTP_SERVER_MAIN_HPP
+#ifndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_BASE_MAIN_HPP
+#define XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_BASE_MAIN_HPP
 
-#include "xos/app/console/protocol/sttp/server/main_opt.hpp"
+#include "xos/app/console/network/sockets/protocol/sttp/base/main_opt.hpp"
+
+#define XOS_NETWORK_SOCKETS_PROTOCOL_STTP_ENDOF_CONTENT "\r\n\r\n"
 
 namespace xos {
 namespace app {
 namespace console {
+namespace network {
+namespace sockets {
 namespace protocol {
 namespace sttp {
-namespace server {
+namespace base {
 
 /// class maint
 template 
-<class TExtends = xos::app::console::protocol::sttp::server::main_optt<>,  class TImplements = typename TExtends::implements>
+<class TExtends = xos::app::console::network::sockets::protocol::sttp::base::main_optt<>,  class TImplements = typename TExtends::implements>
 
 class maint: virtual public TImplements, public TExtends {
 public:
@@ -57,7 +61,9 @@ public:
     typedef typename extends::string_reader_t string_reader_t;
 
     /// constructor / destructor
-    maint(): run_(0) {
+    maint()
+    : run_(0),
+      endof_content_string_(XOS_NETWORK_SOCKETS_PROTOCOL_STTP_ENDOF_CONTENT) {
     }
     virtual ~maint() {
     }
@@ -70,7 +76,8 @@ protected:
     typedef typename extends::in_reader_t in_reader_t;
     typedef typename extends::out_writer_t out_writer_t;
     typedef typename extends::err_writer_t err_writer_t;
-
+    
+    typedef typename extends::string_output_t string_output_t;
     typedef typename extends::output_t output_t;
     typedef typename output_t::output_to_t output_to_t;
     typedef typename output_t::output_to_t::string_t output_to_string_t;
@@ -99,88 +106,41 @@ protected:
     }
 
     //////////////////////////////////////////////////////////////////////////
-    /// ...client_hello_run
-    virtual int client_hello_run(int argc, char_t** argv, char_t** env) {
-        int err = 0;
-        output_t& output = this->output(); 
-        output.output_client_hello_messages();
-        return err;
-    }
-
-    /// ...server_hello_run
-    virtual int server_hello_run(int argc, char_t** argv, char_t** env) {
-        int err = 0;
-        output_t& output = this->output(); 
-        output.output_server_hello_messages();
-        return err;
-    }
-
-    /// ...output_server_hello_message_plaintext_run
-    virtual int output_server_hello_message_plaintext_run(int argc, char_t** argv, char_t** env) {
-        int err = 0;
-        output_t& output = this->output(); 
-        output.output_server_hello_message_plaintext();
-        return err;
-    }
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
-    /// ...client_hello_option...
-    virtual int on_set_client_hello_option
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if ((optarg) && (optarg[0])) {
-            output_t& output = this->output(); 
-            output.on_set_client_hello_option(optarg);
-        } else {
-        }
-        return err;
-    }
-
-    /// ...server_hello_option...
-    virtual int on_set_server_hello_option
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if ((optarg) && (optarg[0])) {
-            output_t& output = this->output(); 
-            output.on_set_server_hello_option(optarg);
-        } else {
-        }
-        return err;
-    }
-
-    /// ...hello_message_option...
-    virtual int on_set_hello_message_option
-    (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
-        int err = 0;
-        if ((optarg) && (optarg[0])) {
-            if ((optarg) && (optarg[0])) {
-                output_t& output = this->output(); 
-                output.on_set_server_hello_message_option(optarg);
-            }
-        } else {
-        }
-        return err;
-    }
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
-    virtual output_t& output() const {
-        return (output_t&)output_;
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+    /// ...content_string
+    virtual string_t& content_string() const {
+        return (string_t&)content_string_;
+    }
+    virtual string_t& endof_content_string() const {
+        return (string_t&)endof_content_string_;
     }
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
 protected:
-    output_t output_;
+    string_t endof_content_string_, content_string_;
 }; /// class maint 
 typedef maint<> main;
 
-} /// namespace server 
+} /// namespace base 
 } /// namespace sttp 
 } /// namespace protocol 
+} /// namespace sockets 
+} /// namespace network 
 } /// namespace console 
 } /// namespace app 
 } /// namespace xos 
 
-#endif /// ndef XOS_APP_CONSOLE_PROTOCOL_STTP_SERVER_MAIN_HPP
+#endif /// ndef XOS_APP_CONSOLE_NETWORK_SOCKETS_PROTOCOL_STTP_BASE_MAIN_HPP

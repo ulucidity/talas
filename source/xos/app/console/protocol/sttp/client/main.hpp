@@ -16,7 +16,7 @@
 ///   File: main.hpp
 ///
 /// Author: $author$
-///   Date: 6/14/2025
+///   Date: 6/21/2025
 //////////////////////////////////////////////////////////////////////////
 #ifndef XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_HPP
 #define XOS_APP_CONSOLE_PROTOCOL_STTP_CLIENT_MAIN_HPP
@@ -70,7 +70,10 @@ protected:
     typedef typename extends::in_reader_t in_reader_t;
     typedef typename extends::out_writer_t out_writer_t;
     typedef typename extends::err_writer_t err_writer_t;
+
     typedef typename extends::output_t output_t;
+    typedef typename output_t::output_to_t output_to_t;
+    typedef typename output_t::output_to_t::string_t output_to_string_t;
 
     //////////////////////////////////////////////////////////////////////////
     /// run
@@ -103,7 +106,7 @@ protected:
         output.output_generate_client_hello();
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_hello_message_run
     virtual int output_client_hello_message_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -111,7 +114,7 @@ protected:
         output.output_client_hello_messages();
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_server_hello_message_run
     virtual int output_server_hello_message_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -119,7 +122,7 @@ protected:
         output.output_server_hello_messages();
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_hello_message_plaintext_run
     virtual int output_client_hello_message_plaintext_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -127,7 +130,7 @@ protected:
         output.output_client_hello_message_plaintext();
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...output_client_hello_message_default_plaintext_run
     virtual int output_client_hello_message_default_plaintext_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
@@ -149,7 +152,7 @@ protected:
         }
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...client_hello_message_option...
     virtual int on_set_client_hello_message_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -161,7 +164,7 @@ protected:
         }
         return err;
     }
-    //////////////////////////////////////////////////////////////////////////
+
     /// ...server_hello_message_option...
     virtual int on_set_server_hello_message_option
     (const char_t* optarg, int optind, int argc, char_t**argv, char_t**env) {
@@ -176,10 +179,14 @@ protected:
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
+    virtual output_t& output() const {
+        return (output_t&)output_;
+    }
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
 protected:
+    output_t output_;
 }; /// class maint 
 typedef maint<> main;
 
